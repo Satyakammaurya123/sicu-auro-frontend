@@ -12,10 +12,10 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 import TableCard from "./TableCard";
 import Navbar from "./Navbar";
 import axios from "axios";
-import { useAuth } from "../context/authContext";
+// import { useAuth } from "../context/authContext";
 
 function DataTable() {
-  const [auth, setAuth] = useAuth();
+  // const [auth, setAuth] = useAuth();
   //GET DATA
   const [getData, setGetData] = useState([]);
 
@@ -24,20 +24,32 @@ function DataTable() {
   const [loading, setLoading] = useState(false);
 
   //get all data
-  const getTableData = async () => {
-    const res = await axios.get("http://localhost:8080/api/v1/user/user");
-    if (!getData) {
-      alert("No data available");
-    }
-    // console.log("res", res.data.users);
-    setGetData(res.data.users);
+  // const getTableData = async () => {
+  //   const res = await axios.get("http://localhost:8080/api/v1/user/user");
+  //   if (!getData) {
+  //     alert("No data available");
+  //   }
+  //   // console.log("res", res.data.users);
+  //   setGetData(res.data.users);
 
-    console.log("log", getData);
-  };
+  //   console.log("log", getData);
+  //   console.log(loading);
+  // };
 
   useEffect((e) => {
+    const getTableData = async () => {
+      const res = await axios.get("http://localhost:8080/api/v1/user/user");
+      if (!getData) {
+        alert("No data available");
+      }
+      // console.log("res", res.data.users);
+      setGetData(res.data.users);
+  
+      console.log("log", getData);
+      console.log(loading);
+    };
     getTableData();
-  }, []);
+  }, [loading,getData]);
 
   //SEARCH
   const handleSubmit = async (e) => {

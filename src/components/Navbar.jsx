@@ -1,5 +1,5 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import Logo1 from "../asserts/sicu-aura_logo-removebg 3.png";
 import Logo2 from "../asserts/sicu-aura_logo-removebg 4.png";
 import Avator from "../asserts/Ellipse 40.png";

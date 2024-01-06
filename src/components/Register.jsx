@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import HomeImage from "../asserts/homeImg.png.png";
 import Logo from "../asserts/image 12.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const navigate = useNavigate();

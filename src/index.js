@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { AppProvider, AuthProvider } from "./context/authContext";
-import { TokenProvider } from "./context/tokenContext";
-import { SearchProvider } from "./context/searchContext";
+import { AuthProvider } from "./context/authContext";
+// import { TokenProvider } from "./context/tokenContext";
+// import { SearchProvider } from "./context/searchContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
